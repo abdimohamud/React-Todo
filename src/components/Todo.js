@@ -5,7 +5,7 @@ const Todo = (props) => {
         <div
         onClick={() => props.toggleItem(props.item.id)}
         >
-           <p>{props.item.name}</p> 
+           <p>{props.item.name}{props.item.emoji}</p> 
         </div>
         
     )

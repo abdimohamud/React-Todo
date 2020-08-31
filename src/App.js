@@ -6,7 +6,8 @@ const tasksData = [
   {
     name:"Abdi",
     id:12345,
-    completed:false
+    completed:false,
+    emoji: ''
   }
 ]
 
@@ -32,10 +33,12 @@ class App extends React.Component {
         if (item.id === id) {
           return {
             ...item,
-            completed: !item.completed
+            completed: !item.completed,
+            emoji: '✔️'
+
           };
         } else {
-          return item;
+         return item
         }
       })
     });
@@ -46,7 +49,8 @@ class App extends React.Component {
     const newTask ={
       name: taskName,
       id:  Date.now(),
-      completed: false
+      completed: false,
+      
     };
 
     this.setState({
