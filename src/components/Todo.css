@@ -1,0 +1,10 @@
+.tasks{
+    margin-top: 2%;
+    border: 1px dotted purple;
+}
+.TodoApp{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dotted purple;
+}
