@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoList'
 import TodoForm from './components/TodoForm'
+import './components/Todo.css'
 
 const tasksData = [
   {
@@ -24,10 +25,6 @@ class App extends React.Component {
   }
   toggleItem = id => {
     console.log(id);
-    // Update tasks on our state object
-    // use this.setState
-    // loop through the arr
-    // find which element we clicked update the "pruchased" property
     this.setState({
       tasks: this.state.tasks.map(item => {
         if (item.id === id) {
@@ -50,6 +47,7 @@ class App extends React.Component {
       name: taskName,
       id:  Date.now(),
       completed: false,
+      emoji: ''
       
     };
 
@@ -66,10 +64,10 @@ class App extends React.Component {
   };  
   render() {
     return (
-      <div>
+      <div className="TodoApp">
         <h2>Welcome to your Todo App!</h2>
         <TodoForm addTask={this.addTask} />
-        <div>
+        <div className="tasks">
            <TodoList
             tasks={this.state.tasks}
             toggleItem={this.toggleItem}
